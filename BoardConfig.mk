@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+
 BOARD_VENDOR := xiaomi
 
 DEVICE_PATH := device/xiaomi/cepheus
