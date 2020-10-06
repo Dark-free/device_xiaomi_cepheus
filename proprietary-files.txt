@@ -122,6 +122,8 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.btconfigstore@1.0.so
 
 # Bluetooth | coral-user-11-RP1A.200720.009-6720564-release-keys
+system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
+system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|d2d55bf0a11eed058a76406cfa5d45d63a0a4f21
 vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so|d8cc4680848db03ddcfd99a53cbe1b15b7b282da
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|73a21d7de95341f64f65859c995064ddcfb0a422
