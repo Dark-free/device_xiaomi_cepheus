@@ -24,6 +24,9 @@ $(call inherit-product, device/xiaomi/cepheus/device.mk)
 # Inherit some common Revenge stuff.
 $(call inherit-product, vendor/revengeos/config/common.mk)
 
+# Inherit GApps if exsits
+$(call inherit-product-if-exists, vendor/gapps/gapps.mk)
+
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
