@@ -31,12 +31,47 @@
 #include <android-base/properties.h>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
+#include <sys/stat.h>
+#include <sys/types.h>
 
 #include "vendor_init.h"
 
 using android::base::GetProperty;
 using android::base::SetProperty;
 
+
+/* From Magisk@jni/magiskhide/hide_utils.c */
+static const char *snet_prop_key[] = {
+    "ro.boot.vbmeta.device_state",
+    "ro.boot.verifiedbootstate",
+    "ro.boot.flash.locked",
+    "ro.boot.selinux",
+    "ro.boot.veritymode",
+    "ro.boot.warranty_bit",
+    "ro.warranty_bit",
+    "ro.debuggable",
+    "ro.secure",
+    "ro.build.type",
+    "ro.build.tags",
+    "ro.build.selinux",
+    NULL
+};
+
+static const char *snet_prop_value[] = {
+    "locked",
+    "green",
+    "1",
+    "enforcing",
+    "enforcing",
+    "0",
+    "0",
+    "0",
+    "1",
+    "user",
+    "release-keys",
+    "1",
+    NULL
+};
 
 void property_override(char const prop[], char const value[])
 {
@@ -54,9 +89,23 @@ void property_override_dual(char const system_prop[],
     property_override(vendor_prop, value);
 }
 
+static void workaround_snet_properties()
+{
+
+    // Hide all sensitive props
+    for (int i = 0; snet_prop_key[i]; ++i) {
+        property_override(snet_prop_key[i], snet_prop_value[i]);
+    }
+
+    chmod("/sys/fs/selinux/enforce", 0640);
+    chmod("/sys/fs/selinux/policy", 0440);
+}
+
 void vendor_load_properties() {
     // fingerprint
     property_override("ro.build.description", "cepheus-user 10 QKQ1.190825.002 V12.0.3.0.QFAEUXM release-keys");
     property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/coral/coral:11/RP1A.201105.002/6869500:user/release-keys");
-    property_override("ro.boot.verifiedbootstate", "green");
+
+    // Workaround SafetyNet
+    workaround_snet_properties();
 }
