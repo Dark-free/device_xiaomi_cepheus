@@ -82,8 +82,3 @@ extract "${MY_DIR}/proprietary-files.txt" "${SRC}" \
         "${KANG}" --section "${SECTION}"
 
 "${MY_DIR}/setup-makefiles.sh"
-
-for i in $(grep -rn 'libhidltransport.so\|libhwbinder.so' ../../../vendor/xiaomi/"${DEVICE}"/proprietary | awk '{print $3}'); do
-	patchelf --remove-needed "libhwbinder.so" "$i"
-	patchelf --remove-needed "libhidltransport.so" "$i"
-done
