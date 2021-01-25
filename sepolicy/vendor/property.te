@@ -7,5 +7,3 @@ type mlipay_prop, property_type;
 # Power
 vendor_internal_prop(vendor_power_prop)
 
-# Thermal
-type vendor_thermal_prop, property_type;
