@@ -99,8 +99,8 @@ static void workaround_snet_properties()
 
 void vendor_load_properties() {
     // fingerprint
-    property_override("ro.build.description", "cepheus-user 11 RKQ1.200826.002 21.1.14 release-keys");
-    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/coral/coral:11/RQ1A.210105.003/7005429:user/release-keys");
+    property_override("ro.build.description", "cepheus-user 11 RKQ1.200826.002 21.2.3 release-keys");
+    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/coral/coral:11/RQ1A.210205.004/7038034:user/release-keys");
 
     // Workaround SafetyNet
     workaround_snet_properties();
