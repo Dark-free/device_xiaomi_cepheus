@@ -23,15 +23,15 @@ $(call inherit-product, device/xiaomi/cepheus/device.mk)
 
 # Inherit some common PixelExperience stuff.
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_GAPPS_ARCH := arm64
-TARGET_INCLUDE_STOCK_ARCORE := true
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+#TARGET_GAPPS_ARCH := arm64
+#TARGET_INCLUDE_STOCK_ARCORE := true
+$(call inherit-product, vendor/carbon/config/common_full_phone.mk)
 
 # Inherit GApps if exsits
 $(call inherit-product-if-exists, vendor/gapps/gapps.mk)
 
 # Device identifier
-PRODUCT_NAME := aosp_cepheus
+PRODUCT_NAME := carbon_cepheus
 PRODUCT_DEVICE := cepheus
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi 9
