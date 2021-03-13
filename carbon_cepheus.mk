@@ -40,3 +40,9 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # Include firmware
 #$(call inherit-product, vendor/xiaomi/firmware/cepheus/firmware.mk)
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="cepheus-user 11 RKQ1.200826.002 21.2.3 release-keys"
+
+# Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
+BUILD_FINGERPRINT := "google/coral/coral:11/RQ1A.210205.004/7038034:user/release-keys"
