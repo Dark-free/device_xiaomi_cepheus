@@ -21,21 +21,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from cepheus device
 $(call inherit-product, device/xiaomi/cepheus/device.mk)
 
-# Inherit some common PixelExperience stuff.
-TARGET_BOOT_ANIMATION_RES := 1080
-#TARGET_GAPPS_ARCH := arm64
-#TARGET_INCLUDE_STOCK_ARCORE := true
-$(call inherit-product, vendor/carbon/config/common_full_phone.mk)
+# Inherit Carbon GSM telephony parts
+$(call inherit-product, vendor/carbon/config/gsm.mk)
 
-# Inherit GApps if exsits
-$(call inherit-product-if-exists, vendor/gapps/gapps.mk)
+# Inherit some common Carbon stuff.
+$(call inherit-product, vendor/carbon/config/common.mk)
 
-# Device identifier
-PRODUCT_NAME := carbon_cepheus
+# Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := cepheus
+PRODUCT_NAME := carbon_cepheus
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi 9
 PRODUCT_MANUFACTURER := Xiaomi
+TARGET_VENDOR := Xiaomi
+BOARD_VENDOR := Xiaomi
+
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # Include firmware
-$(call inherit-product, vendor/xiaomi/firmware/cepheus/firmware.mk)
+#$(call inherit-product, vendor/xiaomi/firmware/cepheus/firmware.mk)
