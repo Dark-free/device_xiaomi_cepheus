@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/carbon_cepheus.mk
+    $(LOCAL_DIR)/palladium_cepheus.mk
 
 COMMON_LUNCH_CHOICES := \
-    carbon_cepheus-user \
-    carbon_cepheus-userdebug \
-    carbon_cepheus-eng
+    palladium_cepheus-user \
+    palladium_cepheus-userdebug \
+    palladium_cepheus-eng
