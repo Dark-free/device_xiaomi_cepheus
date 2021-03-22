@@ -34,6 +34,11 @@ persist.vendor.camera.multicam=TRUE
 # Display density
 ro.sf.lcd_density=440
 
+# Enable blurs, hidden under dev option
+ro.surface_flinger.supports_background_blur=1
+persist.sys.sf.disable_blurs=1
+ro.sf.blurs_are_expensive=1
+
 # Graphics
 ro.surface_flinger.has_wide_color_display=true
 ro.surface_flinger.has_HDR_display=true
