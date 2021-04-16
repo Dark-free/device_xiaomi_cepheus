@@ -22,14 +22,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/cepheus/device.mk)
 
 # Inherit palladium GSM telephony parts
-$(call inherit-product, vendor/palladium/config/gsm.mk)
+$(call inherit-product, vendor/kangos/config/gsm.mk)
+
+$(call inherit-product, vendor/kangos/config/telephony.mk)
 
 # Inherit some common palladium stuff.
-$(call inherit-product, vendor/palladium/config/common.mk)
+$(call inherit-product, vendor/kangos/config/common.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := cepheus
-PRODUCT_NAME := palladium_cepheus
+PRODUCT_NAME := kangos_cepheus
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi 9
 PRODUCT_MANUFACTURER := Xiaomi
