@@ -137,7 +137,7 @@ PRODUCT_COPY_FILES += \
 
 # Device-specific settings
 PRODUCT_PACKAGES += \
-    
+
 
 # Display
 PRODUCT_PACKAGES += \
@@ -173,6 +173,10 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     libtinyxml
+		Device init scripts
+
+PRODUCT_PACKAGES += \
+	  init.target.rc
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -354,7 +358,7 @@ PRODUCT_COPY_FILES += \
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-		$(LOCAL_PATH)/overlay-kangos \
+		$(LOCAL_PATH)/overlay-aosp \
 
 # Power
 PRODUCT_PACKAGES += \

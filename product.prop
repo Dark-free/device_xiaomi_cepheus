@@ -115,5 +115,13 @@ ro.surface_flinger.protected_contents=true
 # WiFi
 wifi.interface=wlan0
 
+# Official stuff
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.ppui.device_name=Cepheus \
+ro.ppui.version=3.5 \
+ro.ppui.version_code=Jasper \
+ro.ppui.is_official=true \
+ro.ppui.maintainer_name=freesoul00
+
 # Zygote
 persist.device_config.runtime_native.usap_pool_enabled=true
