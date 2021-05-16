@@ -33,20 +33,9 @@ PRODUCT_MANUFACTURER := Xiaomi
 
 # PixelPlus Properties !
 TARGET_INCLUDE_WIFI_EXT := true
-TARGET_GAPPS_ARCH := arm64
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_INCLUDE_LIVE_WALLPAPERS := false
-TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_FACE_UNLOCK_SUPPORTED = true
 CUSTOM_BUILD_TYPE=OFFICIAL
-
-# PixelPlus Props !
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.ppui.device_name=Cepheus \
-ro.ppui.version=3.5 \
-ro.ppui.version_code=Jasper \
-ro.ppui.is_official=true \
-ro.ppui.maintainer_name=freesoul00
 
 # Include firmware
 $(call inherit-product, vendor/xiaomi/firmware/cepheus/firmware.mk)
