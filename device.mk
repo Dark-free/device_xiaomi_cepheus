@@ -135,10 +135,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libc++.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc++.so
 
-# Device-specific settings
-PRODUCT_PACKAGES += \
-
-
 # Display
 PRODUCT_PACKAGES += \
     disable_configstore
@@ -173,8 +169,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     libtinyxml
-		Device init scripts
 
+#Device init scripts
 PRODUCT_PACKAGES += \
 	  init.target.rc
 

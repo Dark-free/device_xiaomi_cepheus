@@ -24,9 +24,6 @@ $(call inherit-product, device/xiaomi/cepheus/device.mk)
 # Inherit some common PPUI stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
-# Boot animation
-TARGET_BOOT_ANIMATION_RES := 1080
-
 # Device identifier
 PRODUCT_NAME := aosp_cepheus
 PRODUCT_DEVICE := cepheus
@@ -34,9 +31,16 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi 9
 PRODUCT_MANUFACTURER := Xiaomi
 
+# PixelPlus Properties !
+TARGET_INCLUDE_WIFI_EXT := true
+TARGET_GAPPS_ARCH := arm64
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
+TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_FACE_UNLOCK_SUPPORTED = true
 CUSTOM_BUILD_TYPE=OFFICIAL
 
+# PixelPlus Props !
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.ppui.device_name=Cepheus \
 ro.ppui.version=3.5 \
