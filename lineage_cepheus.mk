@@ -21,21 +21,29 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from cepheus device
 $(call inherit-product, device/xiaomi/cepheus/device.mk)
 
-# Inherit some common PPUI stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common sakura stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Device identifier
-PRODUCT_NAME := aosp_cepheus
+PRODUCT_NAME := lineage_cepheus
 PRODUCT_DEVICE := cepheus
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi 9
 PRODUCT_MANUFACTURER := Xiaomi
 
-# PixelPlus Properties !
-TARGET_INCLUDE_WIFI_EXT := true
+# Lineage Properties !
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_FACE_UNLOCK_SUPPORTED = true
-CUSTOM_BUILD_TYPE=OFFICIAL
+
+# Build Fingerprint
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    TARGET_DEVICE="cepheus" \
+    PRODUCT_NAME="cepheus" \
+    PRIVATE_BUILD_DESC="redfin-user 11 RQ2A.210505.003 7255357 release-keys"
+
+BUILD_FINGERPRINT := "google/redfin/redfin:11/RQ2A.210505.003/7255357:user/release-keys"
+
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.build.fingerprint=$(BUILD_FINGERPRINT)
 
 # Include firmware
 $(call inherit-product, vendor/xiaomi/firmware/cepheus/firmware.mk)
