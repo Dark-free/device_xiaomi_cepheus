@@ -36,6 +36,7 @@ PRODUCT_DEVICE := cepheus
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi 9
 PRODUCT_MANUFACTURER := Xiaomi
+PALLADIUM_BUILD_VARIANT := GAPPS
 
 # Include firmware
 $(call inherit-product, vendor/xiaomi/firmware/cepheus/firmware.mk)
