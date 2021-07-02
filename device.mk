@@ -119,9 +119,8 @@ PRODUCT_COPY_FILES += \
 TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
 
-# Camera
-PRODUCT_PACKAGES += \
-    GCamGOPrebuilt
+## Google Camera
+$(call inherit-product-if-exists, vendor/GoogleCamera/GoogleCamera.mk)
 
 PRODUCT_PACKAGES += \
     libshim_megvii
