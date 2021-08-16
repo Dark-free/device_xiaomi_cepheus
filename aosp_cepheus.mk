@@ -22,7 +22,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/cepheus/device.mk)
 
 # Inherit some common PPUI stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common.mk)
 
 # Device identifier
 PRODUCT_NAME := aosp_cepheus
@@ -35,7 +35,6 @@ PRODUCT_MANUFACTURER := Xiaomi
 TARGET_INCLUDE_WIFI_EXT := true
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_FACE_UNLOCK_SUPPORTED = true
-CUSTOM_BUILD_TYPE=OFFICIAL
 
 # Include firmware
 $(call inherit-product, vendor/xiaomi/firmware/cepheus/firmware.mk)
