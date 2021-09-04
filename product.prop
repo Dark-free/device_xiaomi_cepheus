@@ -6,6 +6,12 @@ persist.vendor.btstack.enable.twsplussho=true
 persist.vendor.bt.a2dp.aac_whitelist=false
 ro.bluetooth.library_name=libbluetooth_qti.so
 
+#Adding for Debugging
+persist.service.adb.enable=1 
+persist.sys.usb.config=mtp,adb 
+persist.service.debuggable=1 
+ro.adb.secure=0
+
 # Blur
 ro.sf.blurs_are_expensive=1
 
