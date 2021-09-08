@@ -37,5 +37,3 @@ TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_FACE_UNLOCK_SUPPORTED = true
 CUSTOM_BUILD_TYPE=OFFICIAL
 
-# Include firmware
-$(call inherit-product, vendor/xiaomi/firmware/cepheus/firmware.mk)
