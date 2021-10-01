@@ -15,8 +15,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_cepheus.mk
+    $(LOCAL_DIR)/krypton_cepheus.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_cepheus-user \
-    aosp_cepheus-userdebug \
+    krypton_cepheus-user \
+    krypton_cepheus-userdebug \
